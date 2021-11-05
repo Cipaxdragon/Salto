@@ -31,6 +31,7 @@ cout << "== Program Mencari Nilai maksimum == \n\n" << endl;
 
 	cout << "Bahasa Pemrograman\t:";
 	cin >> bah;
+	bah = toupper(bah);
 
 	cout << "Nilai Ujian \t:"; //0 - 100
 	cin >> nilai[0];
@@ -72,7 +73,6 @@ cout << "== Program Mencari Nilai maksimum == \n\n" << endl;
 	cout << "Nomor Registrasi = " << noreg [0] << endl; 
 	cout << "Nilai Ujiann = " << nilai[0] << endl;
 	
-	
+//Program Nilai Maksimal 
 	system("pause");
-
 }
