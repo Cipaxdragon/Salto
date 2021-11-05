@@ -8,19 +8,23 @@ int main(){
 	string nama[2];
 	char bah[2]; // bahasa pemrograman
 	int nilai[2]; // 0 -> 100
-	int noreg[2];
+	string noreg[2];
 
 //Judul
 cout << "== Program Mencari Nilai maksimum == \n\n" << endl;
 
 //Data Masukan 
+
+// #1
 	cout << "=== Data Peserta 1 ===" << endl;
 
 	cout << "No Registrasi\t:";
 	cin >> noreg[0];
 
-		//JIka inputan tidak 6 digit
-		if(!(noreg[0] >= 100000 && noreg[0] <= 999999)){
+
+	//JIka inputan tidak 6 digit
+		int i = noreg[0].size();
+		if(!(i <= 6)){
 			cout << "Inputan Max 6 digit" << endl;
 			system ("pause");
 			return 0;
@@ -31,25 +35,10 @@ cout << "== Program Mencari Nilai maksimum == \n\n" << endl;
 
 	cout << "Bahasa Pemrograman\t:";
 	cin >> bah;
-	bah = toupper(bah);
+	// bah = toupper(bah[0]);
 
 	cout << "Nilai Ujian \t:"; //0 - 100
 	cin >> nilai[0];
-
-
-	// cout << "=== Data Peserta 2 ===" << endl;
-
-	// cout << "No Registrasi\t:";
-	// cin >> noreg[1];
-
-	// cout << "Nama Peserta\t:";
-	// cin >> nama[1];
-
-	// cout << "Bahasa Pemrograman\t:";
-	// cin >> bah;
-
-	// cout << "Nilai Ujian \t:"; //0 - 100
-	// cin >> nilai[1];
 
 
 //Seleksi Kelas
