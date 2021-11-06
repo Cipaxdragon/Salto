@@ -4,105 +4,100 @@
 using namespace std;
 
 int main(){
-	int x = 0;
-	string nama[5];
-	string nim[5];
-	int nilai[5];
+	int num = 0;
+	string nama[4];
+	string nim[4];
+	int nilai[4];
 
-	//inputan 1
-	 cout << "=== Mahasiswa Pertama ===" << endl;
-	cout << "Masukan Nama => ";
-	cin >> nama[x];
 
-	cout << "Masukan Nim => ";
-	cin >> nim[x];
+	cout << "=== Maba Pertama ===" << endl;
 
-	cout << "Masukan nilai akhir => ";
-	cin >> nilai[x];
+	cout << "Input Nama\t=> ";
+	cin >> nama[num];
 
-	//inputan 2
+	cout << "Input Nim\t=> ";
+	cin >> nim[num];
+
+	cout << "Input nilai\t=> ";
+	cin >> nilai[num];
+
+
 	cout << "\n";
-	 cout << "=== Mahasiswa Kedua ===" << endl;
+	 cout << "=== Maba Kedua ===" << endl;
+	num++;
+	cout << "Input Nama\t=> ";
+	cin >> nama[num];
 
-	x++;
-	cout << "Masukan Nama => ";
-	cin >> nama[x];
+	cout << "Input Nim\t=> ";
+	cin >> nim[num];
 
-	cout << "Masukan Nim => ";
-	cin >> nim[x];
-
-	cout << "Masukan nilai akhir => ";
-	cin >> nilai[x];
+	cout << "Input nilai\t=> ";
+	cin >> nilai[num];
 	cout << "\n";
 
-	//inputan 3
 	 cout << "\n";
-	 cout << "=== Mahasiswa Ketiga ===" << endl;
+	 cout << "=== Maba Ketiga ===" << endl;
 
-	 x++;
-	 cout << "Masukan Nama => ";
-	 cin >> nama[x];
+	 num++;
+	 cout << "Input Nama\t=> ";
+	 cin >> nama[num];
 
-	 cout << "Masukan Nim => ";
-	 cin >> nim[x];
+	 cout << "Input Nim\t=> ";
+	 cin >> nim[num];
 
-	 cout << "Masukan nilai akhir => ";
-	 cin >> nilai[x];
+	 cout << "Input nilai\t=> ";
+	 cin >> nilai[num];
 	 cout << "\n";
 
-	//inputan 4
+
 	 cout << "\n";
-	 cout << "=== Mahasiswa Keempat ===" << endl;
-	 x++;
-	 cout << "Masukan Nama => ";
-	 cin >> nama[x];
+	 cout << "=== Maba Keempat ===" << endl;
+	 num++;
+	 cout << "Input Nama\t=> ";
+	 cin >> nama[num];
 
-	 cout << "Masukan Nim => ";
-	 cin >> nim[x];
+	 cout << "Input Nim\t=> ";
+	 cin >> nim[num];
 
-	 cout << "Masukan nilai akhir => ";
-	 cin >> nilai[x];
+	 cout << "Input nilai\t=> ";
+	 cin >> nilai[num];
 	 cout << "\n";
 
 
 //Data Tertinggi
-//0
-	x = 0;
-	if(nilai[x] > nilai[1] and nilai[x] > nilai[2] and nilai[x] > nilai[3] and nilai[x] > nilai[4]){
-	cout << "Nilai Tertinggi : " << endl;
-	cout << "Nama :" << nama[0] << endl;
-	cout << "NIM  :" << nim[0] << endl;
-	cout << "Nilai  :" << nilai[0] << endl;
-	x++;
+//Seleksi Ketiga
+	num = 0;
+	if(nilai[0] > nilai[1] and nilai[0] > nilai[2] and nilai[0] > nilai[3] and nilai[0] > nilai[4]){
+	cout << "== Nilai Tertinggi == " << endl;
+	cout << "Nama\t: " << nama[0] << endl;
+	cout << "NIM\t: " << nim[0] << endl;
+	cout << "Nilai\t: " << nilai[0] << endl;
 	}
-//1
+//Seleksi Kedua
 
 	else if (nilai[1] > nilai[0] and nilai[1] > nilai[2] and nilai[1] > nilai[3]){
-	cout << "Nilai Tertinggi : " << endl;
-	cout << "Nama :" << nama[1] << endl;
-	cout << "NIM  :" << nim[1] << endl;
-	cout << "Nilai  :" << nilai[1] << endl;
-	x++;
+	cout << "== Nilai Tertinggi == " << endl;
+	cout << "Nama\t:" << nama[1] << endl;
+	cout << "NIM\t: " << nim[1] << endl;
+	cout << "Nilai\t: " << nilai[1] << endl;
 	}
 
-//2
+//Seleksi Kedua
 
 	else if (nilai[2] > nilai[0] and nilai[2] > nilai[1] and nilai[2] > nilai[3]){
-	cout << "Nilai Tertinggi : " << endl;
-	cout << "Nama :" << nama[2] << endl;
-	cout << "NIM  :" << nim[2] << endl;
-	cout << "Nilai  :" << nilai[2] << endl;
-	x++;
+	cout << "== Nilai Tertinggi == " << endl;
+	cout << "Nama\t:" << nama[2] << endl;
+	cout << "NIM\t: " << nim[2] << endl;
+	cout << "Nilai\t: " << nilai[2] << endl;
 	}
 
-//3
+//Selesi Keeempat
 	
 	else if (nilai[3] > nilai[1] and nilai[3] > nilai[2] and nilai[3] > nilai[0]){
-	cout << "Nilai Tertinggi : " << endl;
-	cout << "Nama :" << nama[3] << endl;
-	cout << "NIM  :" << nim[3] << endl;
-	cout << "Nilai  :" << nilai[3] << endl;
-	x++;
+	cout << "== Nilai Tertinggi == " << endl;
+	cout << "Nama\t: " << nama[3] << endl;
+	cout << "NIM]\t: " << nim[3] << endl;
+	cout << "Nilai\t: " << nilai[3] << endl;
 	}
 
 	cout <<  endl;
@@ -110,6 +105,5 @@ int main(){
     ratarata = (nilai[0] + nilai[1] + nilai[2] + nilai[3]) / 4;
 
     cout << "Rata Rata 4 Inputan = " << ratarata << endl;
-
 	system("pause");		
 }
