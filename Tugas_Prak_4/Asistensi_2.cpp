@@ -10,7 +10,6 @@ int main(){
 	int nilai[5];
 
 	//inputan 1
-	cout << "\n";
 	cout << "=== 1 ===" << endl;
 
 	cout << "Masukan Nama => ";
@@ -79,7 +78,7 @@ int main(){
 	}
 //1
 
-	else if (nilai[1] > nilai[0] and nilai[1] > nilai[2] and nilai[1] > nilai[3] and nilai[1] > nilai[4]){
+	else if (nilai[1] > nilai[0] and nilai[1] > nilai[2] and nilai[1] > nilai[3]){
 	cout << "Nilai Tertinggi : " << endl;
 	cout << "Nama :" << nama[1] << endl;
 	cout << "NIM  :" << nim[1] << endl;
@@ -89,7 +88,7 @@ int main(){
 
 //2
 
-	else if (nilai[2] > nilai[0] and nilai[2] > nilai[1] and nilai[2] > nilai[3] and nilai[2] > nilai[4]){
+	else if (nilai[2] > nilai[0] and nilai[2] > nilai[1] and nilai[2] > nilai[3]){
 	cout << "Nilai Tertinggi : " << endl;
 	cout << "Nama :" << nama[2] << endl;
 	cout << "NIM  :" << nim[2] << endl;
@@ -99,7 +98,7 @@ int main(){
 
 //3
 	
-	else if (nilai[3] > nilai[1] and nilai[3] > nilai[2] and nilai[3] > nilai[0] and nilai[3] > nilai[4]){
+	else if (nilai[3] > nilai[1] and nilai[3] > nilai[2] and nilai[3] > nilai[0]){
 	cout << "Nilai Tertinggi : " << endl;
 	cout << "Nama :" << nama[3] << endl;
 	cout << "NIM  :" << nim[3] << endl;
@@ -113,7 +112,7 @@ int main(){
 
 
     int ratarata;
-    ratarata = (nilai[0] + nilai[1] + nilai[2] + nilai[3]) : 4;
+    ratarata = (nilai[0] + nilai[1] + nilai[2] + nilai[3]) / 4;
 
     cout << "Rata Rata 4 Inputan = " << ratarata << endl;
 
