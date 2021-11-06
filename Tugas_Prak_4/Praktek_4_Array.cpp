@@ -126,7 +126,7 @@ int main(){
 
 //Peserta 1
 	if(bahasa[x] == 'B'){
-		pb[x] = "Basis";
+		pb[x] = "Basic";
 		nilbasic[x] = nilai[x];
 		pesb[x] = nama[x];
 	}
@@ -146,7 +146,7 @@ int main(){
 //Peserta 2
 	x++;
 	if(bahasa[x] == 'B'){
-		pb[x] = "Basis";
+		pb[x] = "Basic";
 		nilbasic[x] = nilai[x];
 		pesb[x] = nama[x];
 	}
@@ -165,7 +165,7 @@ int main(){
 //Peserta 3
 	x++;
 	if(bahasa[x] == 'B'){
-		pb[x] = "Basis";
+		pb[x] = "Basic";
 		nilbasic[x] = nilai[x];
 		pesb[x] = nama[x];
 	}
@@ -186,7 +186,7 @@ int main(){
 //Peserta 4
 	x++;
 	if(bahasa[x] == 'B'){
-		pb[x] = "Basis";
+		pb[x] = "Basic";
 		nilbasic[x] = nilai[x];
 		pesb[x] = nama[x];
 	}
@@ -207,7 +207,7 @@ int main(){
 //Peserta 5
 	x++;
 	if(bahasa[x] == 'B'){
-		pb[x] = "Basis";
+		pb[x] = "Basic";
 		nilbasic[x] = nilai[x];
 		pesb[x] = nama[x];
 	}
@@ -228,7 +228,7 @@ int main(){
 //Peserta 6
 	x++;
 	if(bahasa[x] == 'B'){
-		pb[x] = "Basis";
+		pb[x] = "Basic";
 		nilbasic[x] = nilai[x];
 		pesb[x] = nama[x];
 	}
@@ -317,7 +317,7 @@ int main(){
 		cout << "Nilai peserta tertinggi di kelas Basic = " << pesb[1] << endl;
 	}
 //Pascal
-	if(nilpas[0] > nilpas[1]){
+	if(nilpas[2] > nilpas[3]){
 		cout << "Nilai peserta tertinggi di kelas Pascal = " << pesp[2] << endl;
 	}
 	else{
@@ -325,7 +325,7 @@ int main(){
 	}
 
 //C++
-	if(nilce[0] > nilce[1]){
+	if(nilce[4] > nilce[5]){
 		cout << "Nilai peserta tertinggi di kelas C++ = " << pesc[4] << endl;
 	}
 	else{
