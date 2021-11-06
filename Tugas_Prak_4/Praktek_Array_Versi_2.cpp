@@ -88,7 +88,7 @@ int main(){
 	cout << "=== Peserta Pertama ===" << endl;
 	cout << "nama Peserta \t: " << nama_51[x_51] << endl;
 	cout << "No Registrasi \t: " << noreg[x_51] << endl;
-	cout << "nilai_51 Ujian  \t: " << nilai_51[x_51] << endl;
+	cout << "Nilai Ujian  \t: " << nilai_51[x_51] << endl;
 	cout << "\n\n";
 	x_51++;
 	cout << "=== Peserta Kedua ===" << endl;
