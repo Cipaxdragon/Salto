@@ -22,18 +22,18 @@ int main(){
 	cin >> kelas_51;
 
 	if(kelas_51 == 'B'){
-		judul = "=== kelas Bahasa Basic ===";
-		akhir = "nilai Ujian Tertinggi Di kelas basic = > ";
+		judul = "=== Kelas Bahasa Basic ===";
+		akhir = "nilai Ujian Tertinggi Di kelas Basic = > ";
 
 
 	}
 	else	if(kelas_51 == 'P'){
 		judul = "=== kelas Bahasa Pascal ===";
-		akhir = "nilai Ujian Tertinggi Di kelas basic = > ";
+		akhir = "nilai Ujian Tertinggi Di kelas Pascal = > ";
 	}
 	else	if(kelas_51 == 'C'){
 		judul = "=== kelas Bahasa C++ ===";
-		akhir = "nilai Ujian Tertinggi Di kelas basic = > ";
+		akhir = "nilai Ujian Tertinggi Di kelas C++ = > ";
 
 	}
 
@@ -104,4 +104,5 @@ int main(){
 		cout << akhir << nama_51[1] << endl;
 	}
 
+	system("pause");
 }
