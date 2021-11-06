@@ -25,6 +25,7 @@ int main(){
 
 	cout << "Bahasa Pemrograman\t => ";
 	cin >> bahasa [x];
+	bahasa[x] = toupper(bahasa[x]);
 
 	cout << "Nilai Ujian\t => ";
 	cin >> nilai[x];
@@ -42,77 +43,77 @@ int main(){
 
 	cout << "Bahasa Pemrograman\t => ";
 	cin >> bahasa [x];
-
+	bahasa[x] = toupper(bahasa[x]);
 	cout << "Nilai Ujian\t => ";
 	cin >> nilai[x];
 
 	cout << "\n\n";
 
-// //Orang 3
-// 	x++; // x = 2
-// 	cout << "=== Peserta Ketiga === " << endl;
+//Orang 3
+	x++; // x = 2
+	cout << "=== Peserta Ketiga === " << endl;
 
-// 	cout << "No registrasi\t => ";
-// 	cin >> noreg[x];
+	cout << "No registrasi\t => ";
+	cin >> noreg[x];
 
-// 	cout << "Nama Peserta\t => ";
-// 	cin >> nama[x];
+	cout << "Nama Peserta\t => ";
+	cin >> nama[x];
 
-// 	cout << "Bahasa Pemrograman\t => ";
-// 	cin >> bahasa [x];
+	cout << "Bahasa Pemrograman\t => ";
+	cin >> bahasa [x];
+	bahasa[x] = toupper(bahasa[x]);
+	cout << "Nilai Ujian\t => ";
+	cin >> nilai[x];
+	cout << "\n\n";
+//Orang 4
+	x++; // x = 3
+	cout << "=== Peserta Keempat === " << endl;
 
-// 	cout << "Nilai Ujian\t => ";
-// 	cin >> nilai[x];
+	cout << "No registrasi\t => ";
+	cin >> noreg[x];
 
-// //Orang 4
-// 	x++; // x = 3
-// 	cout << "=== Peserta Keempat === " << endl;
+	cout << "Nama Peserta\t => ";
+	cin >> nama[x];
 
-// 	cout << "No registrasi\t => ";
-// 	cin >> noreg[x];
+	cout << "Bahasa Pemrograman\t => ";
+	cin >> bahasa [x];
+	bahasa[x] = toupper(bahasa[x]);
+	cout << "Nilai Ujian\t => ";
+	cin >> nilai[x];
+	cout << "\n\n";
+//Orang 5
+	x++; // x = 4
+	cout << "=== Peserta Kelima === " << endl;
 
-// 	cout << "Nama Peserta\t => ";
-// 	cin >> nama[x];
+	cout << "No registrasi\t => ";
+	cin >> noreg[x];
 
-// 	cout << "Bahasa Pemrograman\t => ";
-// 	cin >> bahasa [x];
+	cout << "Nama Peserta\t => ";
+	cin >> nama[x];
 
-// 	cout << "Nilai Ujian\t => ";
-// 	cin >> nilai[x];
+	cout << "Bahasa Pemrograman\t => ";
+	cin >> bahasa [x];
+	bahasa[x] = toupper(bahasa[x]);
+	cout << "Nilai Ujian\t => ";
+	cin >> nilai[x];
+	cout << "\n\n";
+//Orang 6
+	x++; // x = 5
+	cout << "=== Peserta Keenam === " << endl;
 
-// //Orang 5
-// 	x++; // x = 4
-// 	cout << "=== Peserta Kelima === " << endl;
+	cout << "No registrasi\t => ";
+	cin >> noreg[x];
 
-// 	cout << "No registrasi\t => ";
-// 	cin >> noreg[x];
+	cout << "Nama Peserta\t => ";
+	cin >> nama[x];
 
-// 	cout << "Nama Peserta\t => ";
-// 	cin >> nama[x];
+	cout << "Bahasa Pemrograman\t => ";
+	cin >> bahasa [x];
+	bahasa[x] = toupper(bahasa[x]);
+	cout << "Nilai Ujian\t => ";
+	cin >> nilai[x];
 
-// 	cout << "Bahasa Pemrograman\t => ";
-// 	cin >> bahasa [x];
-
-// 	cout << "Nilai Ujian\t => ";
-// 	cin >> nilai[x];
-
-// //Orang 6
-// 	x++; // x = 5
-// 	cout << "=== Peserta Keenam === " << endl;
-
-// 	cout << "No registrasi\t => ";
-// 	cin >> noreg[x];
-
-// 	cout << "Nama Peserta\t => ";
-// 	cin >> nama[x];
-
-// 	cout << "Bahasa Pemrograman\t => ";
-// 	cin >> bahasa [x];
-
-// 	cout << "Nilai Ujian\t => ";
-// 	cin >> nilai[x];
-
-
+	cout << "\n\n";
 //Proses
 	string pb[6];
 	int nilbasic[6];
@@ -250,22 +251,59 @@ int main(){
 	x = 0;
 	cout << "=== Data Keluaran ===" << endl;
 
-// Peserta Pertama
+// Peserta 1
 	cout << "=== Peserta Pertamma ===" << endl;
 	cout << "Nama Peserta\t\t = " << nama[x] << endl;
 	cout << "Nomor Registrasi\t = " << noreg[x] << endl;
 	cout << "Bahasa Pemrograman\t = " << pb[x] << endl;
-	cout << "Nilai Ujian\t\t = " << noreg[x] << endl;
+	cout << "Nilai Ujian\t\t = " << nilai[x] << endl;
 
 	cout << "\n\n";
-//Peserta Kedua
+//Peserta 2
 	x++;
 	cout << "=== Peserta Kedua ===" << endl;
 	cout << "Nama Peserta\t\t = " << nama[x] << endl;
 	cout << "Nomor Registrasi\t = " << noreg[x] << endl;
 	cout << "Bahasa Pemrograman\t = " << pb[x] << endl;
-	cout << "Nilai Ujian\t\t = " << noreg[x] << endl;
+	cout << "Nilai Ujian\t\t = " << nilai[x] << endl;
 	cout << "\n\n";
+
+//Peserta 3
+	x++;
+	cout << "=== Peserta Ketiga ===" << endl;
+	cout << "Nama Peserta\t\t = " << nama[x] << endl;
+	cout << "Nomor Registrasi\t = " << noreg[x] << endl;
+	cout << "Bahasa Pemrograman\t = " << pb[x] << endl;
+	cout << "Nilai Ujian\t\t = " << nilai[x] << endl;
+	cout << "\n\n";
+
+//Peserta 4
+	x++;
+	cout << "=== Peserta Keempat ===" << endl;
+	cout << "Nama Peserta\t\t = " << nama[x] << endl;
+	cout << "Nomor Registrasi\t = " << noreg[x] << endl;
+	cout << "Bahasa Pemrograman\t = " << pb[x] << endl;
+	cout << "Nilai Ujian\t\t = " << nilai[x] << endl;
+	cout << "\n\n";
+
+//Peserta 5
+	x++;
+	cout << "=== Peserta Kelima ===" << endl;
+	cout << "Nama Peserta\t\t = " << nama[x] << endl;
+	cout << "Nomor Registrasi\t = " << noreg[x] << endl;
+	cout << "Bahasa Pemrograman\t = " << pb[x] << endl;
+	cout << "Nilai Ujian\t\t = " << nilai[x] << endl;
+	cout << "\n\n";
+
+//Peserta 6
+	x++;
+	cout << "=== Peserta Keenam ===" << endl;
+	cout << "Nama Peserta\t\t = " << nama[x] << endl;
+	cout << "Nomor Registrasi\t = " << noreg[x] << endl;
+	cout << "Bahasa Pemrograman\t = " << pb[x] << endl;
+	cout << "Nilai Ujian\t\t = " << nilai[x] << endl;
+	cout << "\n\n";
+
 
 
 //Data Peserta Maksimal
@@ -280,18 +318,18 @@ int main(){
 	}
 //Pascal
 	if(nilpas[0] > nilpas[1]){
-		cout << "Nilai peserta tertinggi di kelas Pascal = " << pesp[0] << endl;
+		cout << "Nilai peserta tertinggi di kelas Pascal = " << pesp[2] << endl;
 	}
 	else{
-		cout << "Nilai peserta tertinggi di kelas Pascal = " << pesp[1] << endl;
+		cout << "Nilai peserta tertinggi di kelas Pascal = " << pesp[3] << endl;
 	}
 
 //C++
 	if(nilce[0] > nilce[1]){
-		cout << "Nilai peserta tertinggi di kelas C++ = " << pesc[0] << endl;
+		cout << "Nilai peserta tertinggi di kelas C++ = " << pesc[4] << endl;
 	}
 	else{
-		cout << "Nilai peserta tertinggi di kelas C++ = " << pesc[1] << endl;
+		cout << "Nilai peserta tertinggi di kelas C++ = " << pesc[5] << endl;
 	}
 	
 //Penutup
