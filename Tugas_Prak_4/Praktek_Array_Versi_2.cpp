@@ -105,5 +105,5 @@ int main(){
 
 	system("pause");
 	main();
-	system("pause");
+
 }
