@@ -78,7 +78,7 @@ int main(){
 	cin >> nilai[x];
 	cout << "\n";
 
-
+//Data Tertinggi
 //0
 	x = 0;
 	if(nilai[x] > nilai[1] and nilai[x] > nilai[2] and nilai[x] > nilai[3] and nilai[x] > nilai[4]){
@@ -128,6 +128,9 @@ int main(){
 	}
 	
 	cout <<  endl;
+
+
+//Nilai Terendah
 //0
 	x = 0;
 	if(nilai[x] < nilai[1] and nilai[x] < nilai[2] and nilai[x] < nilai[3] and nilai[x] < nilai[4]){
@@ -139,7 +142,7 @@ int main(){
 	}
 //1
 
-	else if (nilai[1] > nilai[0] and nilai[1] > nilai[2] and nilai[1] > nilai[3] and nilai[1] > nilai[4]){
+	else if (nilai[1] < nilai[0] and nilai[1] < nilai[2] and nilai[1] < nilai[3] and nilai[1] < nilai[4]){
 	cout << "Nilai Terendah : " << endl;
 	cout << "Nama :" << nama[1] << endl;
 	cout << "NIM  :" << nim[1] << endl;
