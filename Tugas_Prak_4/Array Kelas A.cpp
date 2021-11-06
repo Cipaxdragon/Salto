@@ -116,10 +116,91 @@ int main(){
 
 
 //Proses
+	string pb[6];//Peserta bahasa pemrograman
+	x = 0;
+//Peserta 1
+	if(bahasa[x] == 'B'){
+		pb[x] = "Basis";
+	}
+
+	else if(bahasa[x] == 'P'){
+		pb[x] = "Pascal";
+	}
+	else if(bahasa[x] == 'C'){
+		pb[x] = "C++";
+	}
+//Peserta 2
+	x++;
+	if(bahasa[x] == 'B'){
+		pb[x] = "Basis";
+	}
+
+	else if(bahasa[x] == 'P'){
+		pb[x] = "Pascal";
+	}
+	else if(bahasa[x] == 'C'){
+		pb[x] = "C++";
+	}
+
+//Peserta 3
+	x++;
+	if(bahasa[x] == 'B'){
+		pb[x] = "Basis";
+	}
+
+	else if(bahasa[x] == 'P'){
+		pb[x] = "Pascal";
+	}
+	else if(bahasa[x] == 'C'){
+		pb[x] = "C++";
+	}
+//Peserta 4
+	x++;
+	if(bahasa[x] == 'B'){
+		pb[x] = "Basis";
+	}
+
+	else if(bahasa[x] == 'P'){
+		pb[x] = "Pascal";
+	}
+	else if(bahasa[x] == 'C'){
+		pb[x] = "C++";
+	}
+
+//Peserta 5
+	x++;
+	if(bahasa[x] == 'B'){
+		pb[x] = "Basis";
+	}
+
+	else if(bahasa[x] == 'P'){
+		pb[x] = "Pascal";
+	}
+	else if(bahasa[x] == 'C'){
+		pb[x] = "C++";
+	}
+//Peserta 6
+	x++;
+	if(bahasa[x] == 'B'){
+		pb[x] = "Basis";
+	}
+
+	else if(bahasa[x] == 'P'){
+		pb[x] = "Pascal";
+	}
+	else if(bahasa[x] == 'C'){
+		pb[x] = "C++";
+	}
 
 
 //Data Keluaran
+	x = 0;
 	cout << "=== Data Keluaran ===" << endl;
+
+// Peserta Pertama
+	cout << "=== Peserta Pertamma ===" << endl;
+	cout << "Nama\t = " << nama[x];
+	cout << "\t = " << nama[x];
 
 	system("pause");
 }
