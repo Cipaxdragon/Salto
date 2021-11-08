@@ -17,6 +17,7 @@ int main(){
 
 	cout << "Input nilai\t=> ";
 	cin >> nilai[num];
+	
 
 
 	cout << "\n";
