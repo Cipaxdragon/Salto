@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+
 
 using namespace std;
 
@@ -56,7 +56,7 @@ int main(){
 	 cout << "\n";
 	 cout << "=== 4 ===" << endl;
 	 x++;
-	 cout << "Masukan Nama => ";
+	 cout << "Masukan Nama =>z ";
 	 cin >> nama[x];
 
 	 cout << "Masukan Nim => ";

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void statik (){
+void tipe1 (){
 
     int a,b,n;
 	a = 0;
@@ -26,7 +26,7 @@ void statik (){
 }
 
 
-void dinamis (){
+void tipe2 (){
 	int a,b,n;
 	a = 0;
 	int deret;
@@ -56,10 +56,10 @@ int main(){
 	cin >> pilih;
 	
 	if (pilih == 1){
-		statik();
+		tipe1();
 	}
 	else if (pilih == 2){
-		dinamis();
+		tipe2();
 	}
 	else{
 		cout << "Inputan cuma 1-2" << endl;
