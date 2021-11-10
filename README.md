@@ -15,5 +15,5 @@ https://drive.google.com/drive/folders/19IzOkv4pGnHc3Cx9q9AoV_FVguV5y-Jj?usp=sha
 ##Kopian Suatu Hal
 
 ```ts
-https://docs.google.com/document/d/1j8d6woqSgISvvfJuwpkof-XH-k9OQOuu/edit?usp=sharing&ouid=104025761049845247447&rtpof=true&sd=true
+-5.198279783674039, 119.47642660210576
 ```
