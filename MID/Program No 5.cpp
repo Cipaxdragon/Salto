@@ -23,13 +23,13 @@ int main(){
 	cin >> dmenit[x];
 
 	cout << "Jam Pulang = ";
-	cin >> djam[x];
+	cin >> pjam[x];
 
 	cout << "Menit Pulang = ";
-	cin >> dmenit[x];
+	cin >> pmenit[x];
 
 
-	if(djam[x] == 8 and pjam[x] == 16 and ){
+	if(djam[x] == 8 and pjam[x] == 16){
         rm[x] = "Rajin";
 	}
     else if (djam[x] < 8 and pjam[x] == 16){
