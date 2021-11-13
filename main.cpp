@@ -7,7 +7,7 @@ int main(){
 	int djam[3,dmenit[3];
 	int pjam[3],pmenit;
 	int x;
-	string nilai;
+	string rm;
 	for(int i = 1; i <= )
 	x = 0;
 	cout << "Masukan Nama = ";
@@ -28,9 +28,25 @@ int main(){
 	cin >> dmenit;
 
 
-	if(djam < 8 ){
-		cout
+	if(djam == 8 and pjam == 16){
+        rm = "Rajin"
 	}
+    else if (djam < 8 and pjam == 16){
+        rm = "Sangat Rajin";
+    }
+     else if (djam > 8 and pjam  == 16){
+        rm = "Malas";
+    }
+    else if (djam > 8 and pjam < 16){
+        rm "Sangat Malas";
+    }
+
+    cout << "Hasil Data Keluaran" << endl;
+
+    cout << "Nama :"<< nama << endl;
+    cout << "NIK  :"<< NIK << endl;
+    cout << "Dia adalah Pegawai  : "<< rm << endl;
+    
 	
 
 
