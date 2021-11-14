@@ -4,9 +4,9 @@ using namespace std;
 
 int main(){
 
-//Segitiga Sama Kaki
+    system("cls");
 
-    //Segitiga Tidak Terbalik
+    //Segitiga Sama Kaki
     printf("Pola Segitiga 1\n");
 
     for(int i = 1; i <= 10;i++){
@@ -21,11 +21,10 @@ int main(){
         cout << endl;
 
     }
-//Segitiga Terbalik
     cout << endl;
-    printf("Pola Segitiga 2\n");
+    printf("Pola Segitiga 2\n\n");
 
-    //Segitga Terbalik
+    //Segitga Sama Kaki Tapi Terbalik
     for(int i = 1; i <= 10;i++){
         for(int k = 1; k < i; k++){
             cout << " ";
@@ -35,6 +34,11 @@ int main(){
         }
         cout << endl;
     }
-    system("pause");
+
+    //Ending
+    printf("Tekan Enter Untuk Keluar....");
+    cin.get();
+    system("cls");
+
 
 }
