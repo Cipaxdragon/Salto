@@ -12,7 +12,7 @@ Cuma Liat data
 https://drive.google.com/drive/folders/19IzOkv4pGnHc3Cx9q9AoV_FVguV5y-Jj?usp=sharing
 ```
 
-##Kopian Suatu Hal
+## Kopian Suatu Hal
 
 ```ts
 -5.198279783674039, 119.47642660210576
