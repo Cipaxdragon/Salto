@@ -17,3 +17,6 @@ https://drive.google.com/drive/folders/19IzOkv4pGnHc3Cx9q9AoV_FVguV5y-Jj?usp=sha
 ```ts
 -5.198279783674039, 119.47642660210576
 ```
+
+### Jadwal Matkul
+![screenshot](/image/jadwal.jpg)
