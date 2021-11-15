@@ -24,6 +24,7 @@ int main(){
     cout << endl;
     printf("Pola Segitiga 2\n\n");
 
+
     //Segitga Sama Kaki Tapi Terbalik
     for(int i = 1; i <= 10;i++){
         for(int k = 1; k < i; k++){
