@@ -7,13 +7,15 @@ int main(){
 	int y;
 	int j;
 	cout << "Masukan Jumlah Data : "; cin >> j;
-	string nama[j],nim[j],kelas[j];
+	string nama[j];
+	string nim[j];
+	char kelas[j];
 	for(int i = 0;i < j;i++){
 		y = i + 1;
 		cout << "Peserta " << y << endl;
 		cout << "Masukan Nama "<< y <<" : "; cin.ignore();getline(cin,nama[i]);
-		cout << "Masukan NIM "<< y <<"  : "; cin.ignore();getline(cin,nim[i]);
-		cout << "Masukan Kelas "<< y << ": ";cin.ignore();getline(cin,kelas[i]);
+		cout << "Masukan NIM "<< y <<"  : "; cin >> nim[i];
+		cout << "Masukan Kelas "<< y << ": ";cin >> kelas[i];
 	}
 	
 	cout << "==================" << endl;
