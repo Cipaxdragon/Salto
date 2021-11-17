@@ -21,6 +21,7 @@ int main(){
 	cout << "==================" << endl;
 	y = 0;
 	for(int i = 0;i < j;i++){
+		
 		y = i + 1;
 		cout << "Data Keluaran Peserta " << y << endl;
 		cout << "Nama  "<< y <<"  : " << nama[i] << endl;
