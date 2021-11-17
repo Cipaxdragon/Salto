@@ -52,22 +52,6 @@ int main(){
 		}
 		M++;
 	}
-//Tugas Joko
-	cout << "=== Tugas Joko ===" << endl;
-	cout << "---Kelipatan 3 --" << endl;
-	for(int i = M;i <= N;i++){
-		if(i % 3 == 0){
-			cout << i << endl;
-		}
-	}
-
-
-	cout << "---Kelipatan 7 --" << endl;
-	for(int i = M;i <= N;i++){
-		if(i % 7 == 0){
-			cout << i << endl;
-		}
-	}
 
 //Tugas Joko
 	cout << "=== Tugas Joko ===" << endl;
