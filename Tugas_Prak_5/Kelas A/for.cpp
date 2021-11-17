@@ -24,17 +24,17 @@ int main(){
 cout << endl;
 
 //Tugas Sulastri
-	cout << "=== Tugas Sulastri ===" << endl;
+	cout << "=== Tugas Sulastri =  ==" << endl;
 	cout << "--- Bilangan Ganjil ---" << endl;
 	for(int i = M;i <= N;i++){
-		if( i % 2 == 0){
+		if( i % 2 == 1){
 			cout << i << endl;
 		}
 	}
 
 	cout << "--- Bilangan Genap ---" << endl;
 	for(int i = M;i <= N;i++){
-		if( i % 2 == 1){
+		if( i % 2 == 0){
 			cout << i << endl;
 		}
 	} 
