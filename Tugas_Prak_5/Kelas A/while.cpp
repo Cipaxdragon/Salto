@@ -30,4 +30,63 @@ int main(){
         M++;
         i++;
 	}
+
+//Tugas Sulastri
+	cout << "=== Tugas Sulastri =  ==" << endl;
+	cout << "--- Bilangan Ganjil ---" << endl;
+	M = 1;
+	while(M <= N){
+
+		if( M % 2 == 1){
+			cout << M << endl;
+		}
+		M++;
+	}
+
+	cout << "--- Bilangan Genap ---" << endl;
+	M = 1;
+	while(M <= N){
+
+		if( M % 2 == 0){
+			cout << M << endl;
+		}
+		M++;
+	}
+//Tugas Joko
+	cout << "=== Tugas Joko ===" << endl;
+	cout << "---Kelipatan 3 --" << endl;
+	for(int i = M;i <= N;i++){
+		if(i % 3 == 0){
+			cout << i << endl;
+		}
+	}
+
+
+	cout << "---Kelipatan 7 --" << endl;
+	for(int i = M;i <= N;i++){
+		if(i % 7 == 0){
+			cout << i << endl;
+		}
+	}
+
+//Tugas Joko
+	cout << "=== Tugas Joko ===" << endl;
+	cout << "---Kelipatan 3 --" << endl;
+    M = 1;
+	while(M <= N){
+		if(M % 3 == 0){
+			cout << i << endl;
+		}
+        M++;
+	}
+
+
+	cout << "---Kelipatan 7 --" << endl;
+    M = 1;
+	while(M <= N){
+		if(M % 7 == 0){
+			cout << i << endl;
+		}
+        M++;
+	}
 }
