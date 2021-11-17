@@ -22,9 +22,7 @@ int main(){
 		}
 		if(faktor == 2){
 			cout << i << endl;
-		}
-
-
+		} 
 	}
 
 cout << endl;
