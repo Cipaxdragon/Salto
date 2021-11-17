@@ -5,8 +5,8 @@ using namespace std;
 int main(){
 
 //Variabel
-	int M = 1;
-	int N = 18 + 5;
+	int M = 18;
+	int N = 40;
 
 //Tugas Program Hijrah
 	cout << "==== Tugas Hijrah ====" << endl;
@@ -15,7 +15,7 @@ int main(){
 	int faktor;
 	for(int i = M;i <= N;i++){
 		faktor = 0;
-		for(int j = M;j <= i;j++){
+		for(int j = 1;j <= i;j++){
 			if(i % j == 0){
 				faktor++;
 			}
