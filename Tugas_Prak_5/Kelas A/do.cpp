@@ -5,7 +5,7 @@ using namespace std;
 int main(){
 
 //Variabel
-	int M = 1;
+	int M = 18;
 	int N = 18 + 5;
 
 //Tugas Program Hijrah
