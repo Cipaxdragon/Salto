@@ -12,13 +12,19 @@ int main(){
 	cout << "==== Tugas Hijrah ====" << endl;
 	cout << endl;
 	cout << "---- Bilangan Prima ---" << endl;
+	int faktor;
 	for(int i = M;i <= N;i++){
-
-		if(!(i % 2 == 0) or i == 2){
-			if(i % i == 0 and i % 1 == 0){
-				cout << i << endl;
+		faktor = 0;
+		for(int j = M;j <= i;j++){
+			if(i % j == 0){
+				faktor++;
 			}
 		}
+		if(faktor == 2){
+			cout << i << endl;
+		}
+
+
 	}
 
 cout << endl;

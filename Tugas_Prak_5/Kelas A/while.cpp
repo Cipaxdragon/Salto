@@ -14,13 +14,13 @@ int main(){
 	cout << "---- Bilangan Prima ---" << endl;
 	int i = M;
 	while(i <= N){
-	
-		if(!(i % 2 == 0) or i == 2){
+
+		if( (!(i % 2 == 0) or i == 2) and i != 1 ){
 			if(i % i == 0 and i % 1 == 0){
 				cout << i << endl;
 			}
 		}
-        
+
 		i++;
 	}
 }
