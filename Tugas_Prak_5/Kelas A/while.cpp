@@ -13,20 +13,21 @@ int main(){
 	cout << endl;
 	cout << "---- Bilangan Prima ---" << endl;
 	int i = M;
-	int j = M;
-	int faktor;
-	
 	while(i <= N){
-        faktor = 0;
-		for(int j = M;j <= i;j++){
-			if(i % j == 0){
-				faktor++;
-			}
-		}
 		
-    	if(faktor == 2){
-    		cout << i << endl;
-    	}
-		i++;
+		if(M==2 or M ==3){
+        	cout << M << endl;
+		}
+        if( M % 2 != 0){
+        	
+        	if( M % 3 == 0 or M == 1){
+        	
+			}
+			else{
+				cout << M << endl;;
+			}	
+		}      
+        M++;
+        i++;
 	}
 }
