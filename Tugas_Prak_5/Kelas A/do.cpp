@@ -6,30 +6,30 @@ int main(){
 
 //Variabel
 	int M = 18;
-	int N = 18 + 5;
+	int N = 40;
 
 //Tugas Program Hijrah
 	cout << "==== Tugas Hijrah ====" << endl;
 	cout << endl;
 	cout << "---- Bilangan Prima ---" << endl;
 	int i = M;
+	int faktor;
+	int j;
 	do{
-		
-		if(M==2 or M ==3){
-        	cout << M << endl;
-		}
-        if( M % 2 != 0){
-        	
-        	if( M % 3 == 0 or M == 1){
-        	
+		faktor = 0;
+		j = 1;
+		while(j <= M){
+			if(M % j == 0){
+				faktor++;
 			}
-			else{
-				cout << M << endl;;
-			}	
-		}      
+			j++;
+		}
+
+		if(faktor == 2){
+			cout << M << endl;
+		}
         M++;
-        i++;
-	}while (i <= N);
+	}while (M <= N);
 
 //Tugas Sulastri
 	cout << "=== Tugas Sulastri =  ==" << endl;
