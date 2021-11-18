@@ -18,7 +18,7 @@ int main(){
 	cout << endl;
 	cout << "Bilangan Prima :" << endl;
 	int f;
-	while(M <= N){
+	do{
 		f = 0;
 		i = 1;
 		while(i <= M){
@@ -31,7 +31,7 @@ int main(){
 			cout << M << " ";
 		}
 		M++;
-	}
+	}while(M <= N);
 
 cout << "\n\n";
 
@@ -39,25 +39,25 @@ cout << "\n\n";
 	cout << "Bilangan Ganjil :" << endl;
 
 	M = 1;
-	while(M <= N){
+	do{
 
 		if( M % 2 == 1){
 			cout << M << " ";
 
 		}
 		M++;
-	}
+	}while(M <= N);
 	cout << "\n\n";
 	cout << "--- Bilangan Genap ---" << endl;
 
 	M = 1;
-	while(M <= N){
+	do{
 
 		if( M % 2 == 0){
 			cout << M << " ";
 		}
 		M++;
-	}
+	}while(M <= N);
 	cout << "\n\n";
 
 
@@ -65,22 +65,22 @@ cout << "\n\n";
 	cout << "Kelipatan 3 :" << endl;
 
     M = 1;
-	while(M <= N){
+	do{
 		if(M % 3 == 0){
 			cout << M << " ";
 		}
         M++;
-	}
+	}while(M <= N);
 
 	cout << "\n\n";
 	cout << "Kelipatan 7 :" << endl;
 
     M = 1;
-	while(M <= N){
+	do{
 		if(M % 7 == 0){
 			cout << M << " ";
 		}
         M++;
-	}
+	}while(M <= N);
 
 }
