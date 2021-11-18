@@ -1,0 +1,14 @@
+1. Apa Perbedaan Prosedure dan function ?
+	
+	Prosedur adalah suatu program terpisah dalam blok sendiri yang berfungsi sebagai sub program (program bagian). 
+
+	Function adalah kode program yang dirancang untuk menyelesaikan tugas tertentu yang merupakan  bagian dari program utama.
+
+	Prosedure bisa mengembalikan nilai bisa juga tidak tapi function wajib mengembalikan nilai (return )
+2. Apa itu Pemrograman Modular?
+
+	Pemrograman Modular adalah suatu teknik pemrograman di mana program yang biasanya cukup besar dibagi-bagi menjadi beberapa bagian program yang lebih kecil sehingga akan mudah dipahami dan dapat digunakan kembali, baik untuk program itu sendiri maupun program lain yang memiliki proses yang sama.
+
+3. Kenapa void tidak menggunakan return
+	
+	karena arti dari void adalah kosong, artinya dia adalah  tipe data khusus yang menyatakan tidak ada data. Berarti tidak memerlukan nilai kembalian(return ).
