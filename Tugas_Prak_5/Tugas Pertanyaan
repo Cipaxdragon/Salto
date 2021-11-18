@@ -10,5 +10,5 @@
 	Pemrograman Modular adalah suatu teknik pemrograman di mana program yang biasanya cukup besar dibagi-bagi menjadi beberapa bagian program yang lebih kecil sehingga akan mudah dipahami dan dapat digunakan kembali, baik untuk program itu sendiri maupun program lain yang memiliki proses yang sama.
 
 3. Kenapa void tidak menggunakan return
-	
-	karena arti dari void adalah kosong, artinya dia adalah  tipe data khusus yang menyatakan tidak ada data. Berarti tidak memerlukan nilai kembalian(return ). 
+ 
+	karena arti dari void adalah kosong, artinya dia adalah  tipe data khusus yang menyatakan tidak ada data. Berarti tidak memerlukan nilai kembalian(return ).  
