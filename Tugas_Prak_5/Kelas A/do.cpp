@@ -34,7 +34,7 @@ int main(){
 //Tugas Sulastri
 	cout << "=== Tugas Sulastri =  ==" << endl;
 	cout << "--- Bilangan Ganjil ---" << endl;
-	M = 1;
+	M = 18;
 	do {
 
 		if( M % 2 == 1){
@@ -44,7 +44,7 @@ int main(){
 	}while(M <= N);
 
 	cout << "--- Bilangan Genap ---" << endl;
-	M = 1;
+	M = 18;
 	do{
 
 		if( M % 2 == 0){
@@ -56,7 +56,7 @@ int main(){
 //Tugas Joko
 	cout << "=== Tugas Joko ===" << endl;
 	cout << "---Kelipatan 3 --" << endl;
-    M = 1;
+    M = 18;
 	do{
 		if(M % 3 == 0){
 			cout << M << endl;
@@ -66,7 +66,7 @@ int main(){
 
 
 	cout << "---Kelipatan 7 --" << endl;
-    M = 1;
+    M = 18;
 	do{
 		if(M % 7 == 0){
 			cout << M << endl;
