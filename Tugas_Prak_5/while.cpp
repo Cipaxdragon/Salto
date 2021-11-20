@@ -52,21 +52,21 @@ cout << endl << endl;
 
 	cout << "---- Tugas Sulastri ----\n" << endl;
 	cout << "Bilangan Ganjil : " << endl << endl;
-	for(M = 18;M <= N;M++){
-		if(M % 2 == 1){
-			cout << M << " ";
-		}
+	M = 18;
+	while(M<=N){
+		if(M % 2 == 1) cout << M << " ";
+		M++;
 	}
 
 	cout << endl << endl;
 
 	cout << "Bilangan Genap : " << endl << endl;
-	for(M = 18;M <= N;M++){
-		if(M % 2 == 0){
-			cout << M << " ";
-		}
+	M = 18;
+	while(M<=N){
+		if(M % 2 == 0) cout << M << " ";
+		M++;
 	}
-
+	
 	cout << endl << endl;
 
 	
@@ -85,6 +85,8 @@ cout << endl << endl;
 			cout << M << " ";
 		}
 	}
+
+
 
 
 
