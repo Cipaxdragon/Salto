@@ -67,8 +67,7 @@ int main(){
 		system("cls");
 		main();
 	}
-	
-
+    
 	//End
 	char yn;
 	lagi:
