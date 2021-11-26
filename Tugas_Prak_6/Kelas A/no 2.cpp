@@ -38,7 +38,7 @@ int main(){
 
 	for(i = 0;i < j;i++){
 		cout << "=== Mahasiswa " << i + 1 << " ===" << endl;
-		cout << "Masukan Nama Mahasiswa  => "; cin >> nama[i];
+		cout << "Masukan Nama Mahasiswa  => "; cin.ignore();getline (cin, nama[i]);
 		cout << "Masukan Nilai Kehadiran => "; cin >> hadir[i];
 		cout << "Masukan Nilai Tugas     => "; cin >> tugas[i];
 		cout << "Masukan Nilai MID       => "; cin >> mid[i];
