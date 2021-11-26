@@ -5,7 +5,12 @@ using namespace std;
 //deklarasi function/prosedur
 void ketentuan();
 void nilaiakhir();
-
+float fhadir();
+float ftugas();
+float fmid();
+float flaporan();
+float ffinal();
+float total();
 
 
 //varibel global;
@@ -18,7 +23,7 @@ float final[100];
 float akhir[100];
 char predikat[100];
 int j; // jumlah mahasiswa
-
+int i; //index
 
 
 
@@ -31,7 +36,7 @@ int main(){
 
 	cout << endl;
 
-	for(int i = 0;i < j;i++){
+	for(i = 0;i < j;i++){
 		cout << "=== Mahasiswa " << i + 1 << " ===" << endl;
 		cout << "Masukan Nama Mahasiswa  => "; cin >> nama[i];
 		cout << "Masukan Nilai Kehadiran => "; cin >> hadir[i];
@@ -55,24 +60,25 @@ int main(){
 
 
 void ketentuan(){
-	for(int i = 0;i < j;i++){
+	for(i = 0;i < j;i++){
 		
-		hadir[i]     = hadir[i]    * 0.10;
-		tugas[i]     = tugas[i]    * 0.10;
-		mid[i]       = mid[i]      * 0.15;
-		laporan[i]   = laporan[i]  * 0.40;
-		final[i]     = final[i]    * 0.25;
+		hadir[i]     = fhadir();
+		tugas[i]     = ftugas();
+		mid[i]       = fmid();
+		laporan[i]   = flaporan();
+		final[i]     = ffinal();
 
 	}
 
+
 }
 
-int i;
+
 void nilaiakhir(){
-	for(int i = 0;i < j;i++){
+	for(i = 0;i < j;i++){
 		cout << "=== Mahasiswa " << i + 1 << " ===" << endl;
 		cout << "Nama              : " << nama[i] << endl;
-		akhir[i] = hadir[i] + tugas[i] + mid[i] + laporan[i] + final[i];
+		akhir[i] = total();
 		cout << "Nilai Total/Akhir : " << akhir[i] << endl;
 
 
@@ -106,7 +112,38 @@ void nilaiakhir(){
 }
 
 
+float fhadir(){
+
+	return hadir[i] * 0.10 ;
+}
 
 
+float ftugas(){
+
+	return tugas[i] * 0.15 ;
+}
+
+float fmid(){
+
+	return mid[i] * 0.15 ;
+}
+
+float flaporan(){
+
+	return laporan[i] * 0.40;
+}
+
+float ffinal(){
+
+	return final[i] * 0.25;
+
+}
+
+
+
+float total(){
+	int total = hadir[i] + tugas[i] + mid[i] + laporan[i] + final[i];
+	return total;
+}
 
 
