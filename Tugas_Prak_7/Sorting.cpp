@@ -9,7 +9,7 @@ void isi();
 
 
 int main(){
-	string mapel[3]{
+	string mapel[3] = {
 		"=== Matematika ===",
 		"=== Bahasa ===",
 		"=== IPA ===",
@@ -49,8 +49,7 @@ int main(){
 		}
 		//Output
 		for(int i = 0;i < 5;i++){
-			cout << "No " << i + 1 << " " << nama[i] << " = " <<  nilai[i][m] << endl;
-			
+			cout << "No " << i + 1 << " " << nama[i] << " \t: " <<  nilai[i][m] << endl;
 		}
 
 		cout << endl;			
@@ -62,14 +61,14 @@ int main(){
 
 void isi(){
 	nama[0] = "Salwa";
-	nama[1] = "Miftahul Jannah";
+	nama[1] = "Miftahul";
 	nama[2] = "Refqi";
 	nama[3] = "Fatih";
 	nama[4] = "Alfariz";
 
 	//Salwa[0]
 	nilai[0][0] = 81; 
-	nilai[0][1] = 82; 
+	nilai[0][1] = 83; 
 	nilai[0][2] = 84; 
 
 	//MiftahulJannah[1]
