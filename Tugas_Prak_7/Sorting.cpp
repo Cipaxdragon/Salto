@@ -6,11 +6,14 @@ using namespace std;
 
 //prototype
 void isi();
-void matematika();
-void bahasa();
-void ipa();
+
 
 int main(){
+	string mapel[3]{
+		"=== Matematika ===",
+		"=== Bahasa ===",
+		"=== IPA ===",
+	};
 	isi();
 	int i,j,bantu;
 	string kosong;
@@ -26,113 +29,43 @@ int main(){
 		cout << endl;
 	}
 
-	matematika();
-	isi();
+	for(m = 0;m < 3;m++){
+		cout << mapel[m] << endl;
+		//Proses Sorting
+		for(int i = 0;i < 5;i++){
+			for(int j = i;j < 5;j++){
+				if(nilai[i][m] < nilai[j][m]){
+					//nilai
+					bantu = nilai[i][m];
+					nilai[i][m] = nilai[j][m];
+					nilai[j][m] = bantu;
+					//nama
+					kosong = nama[i];
+					nama[i] = nama[j];
+					nama[j] = kosong;
 
-	bahasa();
-	isi();
+				}
+			}
+		}
+		//Output
+		for(int i = 0;i < 5;i++){
+			cout << "No " << i + 1 << " " << nama[i] << " = " <<  nilai[i][m] << endl;
+			
+		}
 
-	ipa();
-
+		cout << endl;			
+		isi();
+	}
 	system("pause");
 	return 0;
 }
-
-void matematika(){
-
-	int m = 0;
-	int i,j,bantu;
-	string kosong;
-	cout << "== Matematika == " << endl;
-	for(int i = 0;i < 5;i++){
-		for(int j = i;j < 5;j++){
-			if(nilai[i][m] < nilai[j][m]){
-				//nilai
-				bantu = nilai[i][m];
-				nilai[i][m] = nilai[j][m];
-				nilai[j][m] = bantu;
-				//nama
-				kosong = nama[i];
-				nama[i] = nama[j];
-				nama[j] = kosong;
-
-			}
-		}
-	}
-
-	for(int i = 0;i < 5;i++){
-		cout << "No " << i + 1 << endl;
-		cout << nama[i] << " = " <<  nilai[i][m] << endl;
-	}
-	cout << endl;
-}
-
-void bahasa(){
-
-	int m = 1;
-	int i,j,bantu;
-	string kosong;
-	cout << "== bahasa == " << endl;
-	for(int i = 0;i < 5;i++){
-		for(int j = i;j < 5;j++){
-			if(nilai[i][m] < nilai[j][m]){
-				//nilai
-				bantu = nilai[i][m];
-				nilai[i][m] = nilai[j][m];
-				nilai[j][m] = bantu;
-				//nama
-				kosong = nama[i];
-				nama[i] = nama[j];
-				nama[j] = kosong;
-
-			}
-		}
-	}
-
-	for(int i = 0;i < 5;i++){
-		cout << "No " << i + 1 << endl;
-		cout << nama[i] << " = " <<  nilai[i][m] << endl;
-	}
-	cout << endl;
-}
-
-void ipa(){
-	
-	int m = 2;
-	int i,j,bantu;
-	string kosong;
-	cout << "== IPA == " << endl;
-	for(int i = 0;i < 5;i++){
-		for(int j = i;j < 5;j++){
-			if(nilai[i][m] < nilai[j][m]){
-				//nilai
-				bantu = nilai[i][m];
-				nilai[i][m] = nilai[j][m];
-				nilai[j][m] = bantu;
-				//nama
-				kosong = nama[i];
-				nama[i] = nama[j];
-				nama[j] = kosong;
-
-			}
-		}
-	}
-
-	for(int i = 0;i < 5;i++){
-		cout << "No " << i + 1 << endl;
-		cout << nama[i] << " = " <<  nilai[i][m] << endl;
-	}
-	cout << endl;
-}
-
-
 
 void isi(){
 	nama[0] = "Salwa";
 	nama[1] = "Miftahul Jannah";
 	nama[2] = "Refqi";
 	nama[3] = "Fatih";
-	nama[4] = "Altariz";
+	nama[4] = "Alfariz";
 
 	//Salwa[0]
 	nilai[0][0] = 81; 
