@@ -8,17 +8,17 @@ using namespace std;
         609013,
     };
     string nama[100]={
+        "Ghazali",
         "Jotaro",
-        "Naruto",
         "Pablo",
         "Rangga",
     };
 
     string buku[100]={
         "Siksa Neraka",
-        "One Piece",
-        "Modul Algoritma",
-        "Naruto",
+        "Resep Masakan",
+        "Panduan Rakit Bom",
+        "Panduan Rakit PC",
     };
     string tanggal[100]={
         "20/06/2021",
@@ -29,7 +29,7 @@ using namespace std;
     int batas = 4;
 
 //prototype
-	int binary_search(int[],int,int);
+    int binary_search(int[],int,int);
     void tambahdata();
     void hapusdata();
     void lihatdata();
