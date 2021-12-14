@@ -8,11 +8,16 @@ using namespace std;
     int uang;
     int bank;
 
-    string namatransaksi[100];
-    int  nomimal[100];
+    //pemasukan
+    string nammasuk[100];
+    int  pricemasuk[100];
+    int datmasuk = -1;
 
 
-    int batas = -1;
+    //pengeluaran
+    string namkeluar[100];
+    int pricekeluar[100];
+    int datkeluar = -1;
     
 
 
@@ -24,6 +29,7 @@ void pemasukan();
 void daftar();
 void hapus();
 void cari();
+void hapuspemasukan();
 
 int main(){
     int pilih;
@@ -64,7 +70,7 @@ int main(){
             break;
         case 4:
             system("cls");
-            cari();
+            // cari();
             break;
         case 5:
             
@@ -92,8 +98,11 @@ int main(){
 }
 
 void about(){
+    cout << "=== Tugas Final Algoritma Pemrograma===" << endl; 
+    cout << "\n\n";
     cout << "==== Kelompok Biru Tosca =====" << endl;
     cout << "Kelas : C " << endl <<endl; 
+    cout << "Daftar Nama Kelompok :" << endl;
     cout << "----------------------------------------- " << endl;
     cout << "| Nama                  | NIM            |" << endl;
     cout << "|----------------------------------------|" << endl;
@@ -106,62 +115,90 @@ void about(){
 
 
 void tambah(){
-    batas++;
     int pilih;
 
     cout << "=== Tambah Transaksi ===" << endl;
-    cout << " 1 . Pengeluran " << endl;
-    cout << " 2 . Pemasukan  " << endl;
+    cout << " 1 . Pemasukan  " << endl;
+    cout << " 2 . Pengeluran " << endl;
 
     cout << endl << "Pilih [1-2] ==> ";
     cin >> pilih;
 
+    y :
     //proses
     switch(pilih){
         case 1 :
             system("cls");
-            pengeluaran();
+            pemasukan();
             break;
         case 2 :
             system("cls");
-            pemasukan();
+            pengeluaran();
             break;
         default:
             cout << "== Inputan Cuma [1-2] " << endl;
             system("pause");
             tambah();
     }
+//try again
+    x :
+    char yn;
+    cout << "Masih Mau Tambah Transaksi ?" << endl;
+    cout << "[Y/N] =>";
+    cin >> yn;
+    yn = toupper(yn);
 
+    switch(yn){
+        case 'Y' :
+            system("cls");
+            goto y;
+            break;
+        case 'N' :
+            system("cls");
+            break;
+        default :
+            cout << "Input Yang Benar !!!" << endl;
+            system("pause");
+            goto x;
+    }
 
-}
-
-void pengeluaran(){
-    cout << "=== Pengeluaran ===" << endl;
-    cout << "Nama   Pengeluaran => ";
-    cin.ignore();
-    getline(cin,namatransaksi[batas]);
-    cout << "Nomnal Pengeluaran => "; cin >> nomimal[batas];
-
-
-    uang = uang - nomimal[batas];
-    namatransaksi[batas] = namatransaksi[batas] + " [Pengeluaran]";
 
 }
 
 
 void pemasukan (){
+    datmasuk++;
     int nama;
-    cout << "=== Pemasukan "<< batas + 1 <<" ===" << endl;
+    cout << "=== Pemasukan "<< datmasuk + 1 <<" ===" << endl;
     cout << "Nama   Pemasukan   => ";
     cin.ignore();
-    getline(cin,namatransaksi[batas]);
-    cout << "Nomnal Pemasukan   => ";
-    cin >> nomimal[batas];
+    getline(cin,nammasuk[datmasuk]);
+    cout << "Nominal Pemasukan   => ";
+    cin >> pricemasuk[datmasuk];
 
-    uang = uang + nomimal[batas];
-    namatransaksi[batas] = namatransaksi[batas] + " [Pemasukan]";
+    uang = uang + pricemasuk[datmasuk];
+
 
 }
+
+
+
+void pengeluaran(){
+    datkeluar++;
+    cout << "=== Pengeluaran ===" << endl;
+    cout << "Nama   Pengeluaran => ";
+    cin.ignore();
+    getline(cin,namkeluar[datkeluar]);
+    cout << "Nominal Pengeluaran => ";
+    cin >> pricekeluar[datkeluar];
+
+
+    uang = uang - pricekeluar[datkeluar];
+
+
+}
+
+
 
 
 void daftar(){
@@ -169,51 +206,93 @@ void daftar(){
     cout << "Uang Di dompet : Rp "<< uang << endl;
     cout << "Uang Di Bank   : Rp "<< bank << endl << endl;
     int total;
+    int totalkeluar;
     cout << "==== Daftar Transaksi ==== " << endl;
-
-    for(int i = 0;i <= batas;i++){
+//pemasukan
+    cout << "=== Pemasukan ===" << endl;
+    for(int i = 0;i <= datmasuk;i++){
         cout << "Transaksi " << i + 1 << endl;
-        cout << "Nama    : " << namatransaksi[i] << endl;
-        cout << "Nominal : Rp " << nomimal[i] << endl << endl;
+        cout << "Nama    : " << nammasuk[i] << endl;
+        cout << "Nominal : Rp " << pricemasuk[i] << endl << endl;
     }
-    for(int i = 0;i < batas;i++){
-        total = nomimal[i] + nomimal[i + 1];
+    for(int i = 0;i < datmasuk;i++){
+        total = pricemasuk[i] + pricemasuk[i + 1];
     }
-    if(batas != 0){
-        cout << endl << "Total Transaksi : Rp " << total << endl; 
+    if(!(datmasuk <= 0)){
+        cout << endl << "Total Pemasukan : Rp " << total << endl; 
+    }
+
+    cout << endl;
+
+//pengeluaran
+    cout << "=== Pengeluaran ===" << endl;
+    for(int i = 0;i <= datkeluar;i++){
+        cout << "Transaksi " << i + 1 << endl;
+        cout << "Nama    : " << namkeluar[i] << endl;
+        cout << "Nominal : Rp " << pricekeluar[i] << endl << endl;
+    }
+    for(int i = 0;i < datkeluar;i++){
+        totalkeluar = pricekeluar[i] + pricekeluar[i + 1];
+    }
+    if(!(datkeluar <= 0)){
+        cout << endl << "Total Pengeluaran : Rp " << totalkeluar << endl; 
     }
 }
 
-
 void hapus(){
-    int hapus;
-    daftar();
-    cout << endl << "=== Hapus Transaksi ===" << endl;
-    cout << endl << "Hapus Data Ke = > ";
-    cin >> hapus;
-    hapus--;
-    for(int i = hapus;i < batas;i++){
-        namatransaksi[i] = namatransaksi[i + 1];
-        nomimal[i] = nomimal[i + 1];
-    }
+    cout << "==== Hapus Transaksi ====" << endl;
+    cout << "1. Data Pemasukan" << endl;
+    cout << "2. Data Pengeluaran" << endl;
     int pilih;
-    cout << "== Jenis Transaksi ==" << endl;
-    cout << "1. Pemasukan" << endl;
-    cout << "2. Pengeluaran" << endl;
-    cout << "Pilih[1-2] => ";
-    cin >> pilih;
+    cin  >> pilih;
 
     switch(pilih){
         case 1 :
-            uang = uang - nomimal[hapus];
+            hapuspemasukan();
             break;
         case 2 :
-            uang = uang + nomimal[hapus];
+
             break;
     }
-    cout << "Transaksi Ke " << hapus + 1 << " Terhapus " << endl;
-    batas--;
-
 
 }
+
+
+void hapuspemasukan(){
+    int hapus;
+    int total;
+    cout << "== Data Pemasukan == " << endl;
+//output Data
+ cout << "=== Pemasukan ===" << endl;
+    for(int i = 0;i <= datmasuk;i++){
+        cout << "Transaksi " << i + 1 << endl;
+        cout << "Nama    : " << nammasuk[i] << endl;
+        cout << "Nominal : Rp " << pricemasuk[i] << endl << endl;
+    }
+    for(int i = 0;i < datmasuk;i++){
+        total = pricemasuk[i] + pricemasuk[i + 1];
+    }
+    if(!(datmasuk <= 0)){
+        cout << endl << "Total Pemasukan : Rp " << total << endl; 
+    }
+
+    cout << endl;
+
+//Proses Delete
+    cout << "Hapus Transaksi Ke ?" << endl;
+    cout << "[Input] ==>";
+    cin >> hapus;
+    hapus--;
+
+    //perulangan proses delete
+    for(int i = hapus;i <= datmasuk;i++){
+        nammasuk[i] = nammasuk[i + 1];
+        pricemasuk[i] = pricemasuk[i + 1];
+    }
+    cout << "Transaksi Ke " << hapus + 1 << " Berhasil di hapus" << endl;
+    datmasuk--;
+
+}
+
+
 
