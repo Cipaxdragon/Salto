@@ -161,4 +161,5 @@ void hapusdata(){
     }
     cout << "Data Siswa Ke " << a + 1 << " telah terhapus" << endl;
     batas = batas - 1;
+    
 }
