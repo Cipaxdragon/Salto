@@ -13,6 +13,7 @@ using namespace std;
 
 
     int batas = -1;
+    
 
 
 //Prototype
@@ -215,6 +216,4 @@ void hapus(){
 
 
 }
-
-
 
