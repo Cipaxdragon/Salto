@@ -30,8 +30,42 @@ void daftar();
 void hapus();
 void cari();
 void hapuspemasukan();
+void hapuspengeluaran();
+
+
+//pembantu
+bool satu = true;
+void bantu(){
+    //pemasukan
+    nammasuk[0] = "Mencopet";
+    nammasuk[1] = "Jual Pop Ice";
+    nammasuk[2] = "Jual Ayam";
+
+    pricemasuk[0] = 500000;
+    pricemasuk[1] = 100000;
+    pricemasuk[2] = 200000;
+
+    datmasuk = 2;
+    uang = pricemasuk[0] + pricemasuk[1] + pricemasuk[2]; 
+    // pengeluaran
+    namkeluar[0] = "Beli Kopikap";
+    namkeluar[1] = "Di Copet";
+    namkeluar[2] = "Beli ban Dalam";
+
+    pricekeluar[0] = 500000;
+    pricekeluar[1] = 100000;
+    pricekeluar[2] = 200000;
+
+    datkeluar = 2;
+
+
+}
 
 int main(){
+    if(satu == true){
+        satu = false;
+        bantu();
+    }
     int pilih;
     cout << "=== Program Dompet Digital ===" << endl << endl;
     cout << "Uang Di dompet : Rp "<< uang << endl;
@@ -170,7 +204,7 @@ void pemasukan (){
     datmasuk++;
     int nama;
     cout << "=== Pemasukan "<< datmasuk + 1 <<" ===" << endl;
-    cout << "Nama   Pemasukan   => ";
+    cout << "Nama   Pemasukan    => ";
     cin.ignore();
     getline(cin,nammasuk[datmasuk]);
     cout << "Nominal Pemasukan   => ";
@@ -186,7 +220,7 @@ void pemasukan (){
 void pengeluaran(){
     datkeluar++;
     cout << "=== Pengeluaran ===" << endl;
-    cout << "Nama   Pengeluaran => ";
+    cout << "Nama   Pengeluaran  => ";
     cin.ignore();
     getline(cin,namkeluar[datkeluar]);
     cout << "Nominal Pengeluaran => ";
@@ -243,6 +277,7 @@ void hapus(){
     cout << "==== Hapus Transaksi ====" << endl;
     cout << "1. Data Pemasukan" << endl;
     cout << "2. Data Pengeluaran" << endl;
+    cout << "Input[1-2] ==> ";
     int pilih;
     cin  >> pilih;
 
@@ -251,7 +286,7 @@ void hapus(){
             hapuspemasukan();
             break;
         case 2 :
-
+            hapuspengeluaran();
             break;
     }
 
@@ -261,7 +296,7 @@ void hapus(){
 void hapuspemasukan(){
     int hapus;
     int total;
-    cout << "== Data Pemasukan == " << endl;
+    int pricehapus;
 //output Data
  cout << "=== Pemasukan ===" << endl;
     for(int i = 0;i <= datmasuk;i++){
@@ -283,16 +318,62 @@ void hapuspemasukan(){
     cout << "[Input] ==>";
     cin >> hapus;
     hapus--;
-
+    pricehapus = pricemasuk[hapus];
+    uang = uang - pricehapus;
     //perulangan proses delete
     for(int i = hapus;i <= datmasuk;i++){
         nammasuk[i] = nammasuk[i + 1];
         pricemasuk[i] = pricemasuk[i + 1];
     }
-    cout << "Transaksi Ke " << hapus + 1 << " Berhasil di hapus" << endl;
+
+    system("cls");
     datmasuk--;
+    daftar();
+    cout << endl;
+    cout << "Transaksi Ke " << hapus + 1 << " Berhasil di hapus" << endl;
 
 }
 
 
 
+void hapuspengeluaran(){
+    int hapus;
+    int total;
+    int pricehapus;
+
+//output Data
+ cout << "=== Pengeluaran ===" << endl;
+    for(int i = 0;i <= datkeluar;i++){
+        cout << "Transaksi " << i + 1 << endl;
+        cout << "Nama    : " << namkeluar[i] << endl;
+        cout << "Nominal : Rp " << pricekeluar[i] << endl << endl;
+    }
+    for(int i = 0;i < datkeluar;i++){
+        total = pricekeluar[i] + pricekeluar[i + 1];
+    }
+    if(!(datkeluar <= 0)){
+        cout << endl << "Total Pengeluaran : Rp " << total << endl; 
+    }
+
+    cout << endl;
+
+//Proses Delete
+    cout << "Hapus Transaksi Ke ?" << endl;
+    cout << "[Input] ==>";
+    cin >> hapus;
+    hapus--;
+    pricehapus = pricekeluar[hapus];
+    uang = uang + pricehapus;
+    //perulangan proses delete
+    for(int i = hapus;i <= datkeluar;i++){
+        namkeluar[i] = namkeluar[i + 1];
+        pricekeluar[i] = pricekeluar[i + 1];
+    }
+
+    system("cls");
+    datkeluar--;
+    daftar();
+    cout << endl;
+    cout << "Transaksi Ke " << hapus + 1 << " Berhasil di hapus" << endl;
+
+}
