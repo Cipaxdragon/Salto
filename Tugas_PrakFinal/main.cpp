@@ -104,7 +104,7 @@ int main(){
             break;
         case 4:
             system("cls");
-            // cari();
+            cari();
             break;
         case 5:
             
@@ -375,5 +375,46 @@ void hapuspengeluaran(){
     daftar();
     cout << endl;
     cout << "Transaksi Ke " << hapus + 1 << " Berhasil di hapus" << endl;
+
+}
+
+
+void cari(){
+    string cari;
+    bool ditemukan1 = false;
+    bool ditemukan2 = false;
+    cout << "=== Pencaharian ===" << endl;
+    cout << "Cari Transaksi => ";
+    cin.ignore();
+    getline(cin,cari);
+
+    //pencharian pemasukan
+    for(int i = 0;i <= datmasuk;i++){
+        if(cari == nammasuk[i]){
+            cout << "=== Data Di Temukan Pada Transaksi Pemasukan === " << endl;
+            cout << "Transaksi " << i + 1 << endl;
+            cout << "Nama    : " << nammasuk[i] << endl;
+            cout << "Nominal : Rp " << pricemasuk[i] << endl << endl;
+            ditemukan1 = true;
+        }
+    }
+
+    //pencharian pengeluaran
+    for(int i = 0;i <= datkeluar;i++){
+        if(cari == namkeluar[i]){
+            cout << "=== Data Di Temukan Pada Transaksi Pengeluaran === " << endl;
+            cout << "Transaksi " << i + 1 << endl;
+            cout << "Nama    : " << namkeluar[i] << endl;
+            cout << "Nominal : Rp " << pricekeluar[i] << endl << endl;
+            ditemukan2 = true;
+        }
+    }
+
+    if(ditemukan1 == false and ditemukan2 == false){
+        cout << "Data Tidak ditemukan" << endl;
+    }
+
+
+
 
 }
