@@ -28,17 +28,19 @@ void pengeluaran();
 void pemasukan();
 void daftar();
 void hapus();
-void cari();
 void hapuspemasukan();
 void hapuspengeluaran();
+void cari();
 void urutan();
 void urutanpemasukan();
 void urutanpengeluaran();
+void atm();
 
 
 //pembantu
 bool satu = true;
 void bantu(){
+    bank = 1000000;
     //pemasukan
     nammasuk[0] = "Mencopet";
     nammasuk[1] = "Jual Pop Ice";
@@ -82,7 +84,7 @@ int main(){
     cout << "| 3 | Hapus  Transaksi  |" << endl;
     cout << "| 4 | Cari   Transaksi  |" << endl;
     cout << "| 5 | Urutan Transaksi  |" << endl;
-    cout << "| 6 | Akses Bank        |" << endl;
+    cout << "| 6 | Akses Atm         |" << endl;
     cout << "| 7 | Info              |" << endl;
     cout << "| 8 | Keluar            |" << endl;
     cout << "=========================" << endl;
@@ -114,7 +116,8 @@ int main(){
             urutan();
             break;
         case 6:
-            
+            system("cls");
+            atm();
             break;
         case 7:
             system("cls");
@@ -418,9 +421,6 @@ void cari(){
         cout << "Data Tidak ditemukan" << endl;
     }
 
-
-
-
 }
 
 void urutan(){
@@ -512,4 +512,16 @@ void urutanpengeluaran(){
         cout << "Nama    : " << l_namkeluar[i] << endl;
         cout << "Nominal : Rp " << l_pricekeluar[i] << endl << endl;         
     }
+}
+
+
+void atm(){
+    cout << "============== BRU ==============" << endl;
+    cout << "----- Bank Rakyat Duwa Satu -----" << endl << endl;
+
+    cout << "Saldo :    Rp" << bank << endl;
+    cout << "====== Option ======" << endl <<endl;
+    cout << "1. Penarikan Tunai" << endl;
+    cout << "2. Deposit" << endl;
+    cout << "3. Transfer" << endl << endl;
 }
