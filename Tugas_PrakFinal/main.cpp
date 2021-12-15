@@ -573,13 +573,14 @@ void penarikantunai(){
     cin >> tarik;
 
     
-    if(tarik >= bank){
-        cout << "Saldo Tidak Mencukupi" << endl;
-    }
-    else {
-        bank = bank - tarik;
+    if(tarik <= bank){
+    bank = bank - tarik;
         uang = uang + tarik;
         cout << "Penarikan Tunai Sebesar Rp " << tarik << " Berhasil" << endl;
+    }
+    else {
+        cout << "Saldo tidak mencukupi" << endl;
+
     }
 
 }
