@@ -33,8 +33,37 @@ void urutanpemasukan();
 void urutanpengeluaran();
 int totaltransaksi(int a);
 
-int main(){
+//pembantu
+bool satu = true;
+void bantu(){
+    //pemasukan
+    nammasuk[0] = "Mencopet";
+    nammasuk[1] = "Jual Pop Ice";
+    nammasuk[2] = "Jual Ayam";
 
+    pricemasuk[0] = 500000;
+    pricemasuk[1] = 100000;
+    pricemasuk[2] = 200000;
+
+    datmasuk = 2;
+    uang = pricemasuk[0] + pricemasuk[1] + pricemasuk[2]; 
+    // pengeluaran
+    namkeluar[0] = "Beli Kopikap";
+    namkeluar[1] = "Di Copet";
+    namkeluar[2] = "Beli ban Dalam";
+
+    pricekeluar[0] = 500000;
+    pricekeluar[1] = 100000;
+    pricekeluar[2] = 200000;
+
+    datkeluar = 2;
+
+}
+int main(){
+    if(satu == true){
+        satu = false;
+        bantu();
+    }
     int pilih;
     cout << "=== Program Budgeting Uang ===" << endl << endl;
     cout << "Uang Di dompet : Rp "<< uang << endl;
@@ -52,7 +81,7 @@ int main(){
     cout << "=========================" << endl;
     
     lagi:
-    cout << endl << "Pilih[1-8] ==> ";
+    cout << endl << "Pilih[1-7] ==> ";
     cin >> pilih;
 
     system("cls");           
