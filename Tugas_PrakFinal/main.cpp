@@ -31,6 +31,9 @@ void hapus();
 void cari();
 void hapuspemasukan();
 void hapuspengeluaran();
+void urutan();
+void urutanpemasukan();
+void urutanpengeluaran();
 
 
 //pembantu
@@ -107,7 +110,8 @@ int main(){
             cari();
             break;
         case 5:
-            
+            system("cls");
+            urutan();
             break;
         case 6:
             
@@ -417,4 +421,58 @@ void cari(){
 
 
 
+}
+
+void urutan(){
+    int pilih;
+    cout << "==== Urutan Transaksi ====" << endl;
+    cout << " 1 . Pemasukan" << endl;
+    cout << " 2 . Pengeluaran" << endl;
+    cout << endl <<"Input [1-2] ==>";
+    cin >> pilih;
+    switch(pilih){
+        case 1:
+            urutanpemasukan();
+            break;
+        case 2 :
+            urutanpengeluaran();
+            break;
+    }
+}
+
+void urutanpemasukan(){
+    int temp;
+    string tempname;
+    string l_nammasuk[100];
+    int l_pricemasuk[100];
+    cout << "=== Urutan Pemasukan Terbesar ===" << endl;
+    //pemberian Value dari global ke Lokal
+    for(int i = 0;i <= datmasuk;i++){
+        l_nammasuk[i] = nammasuk[i]; 
+        l_pricemasuk[i] = pricemasuk[i]; 
+    }
+
+    //proses Sorting (selection sort) 
+    for(int  i = 0;i <= datmasuk;i++){
+        for(int j = i;j <= datmasuk;j++){
+            if(l_pricemasuk[j] > l_pricemasuk[i]){
+                //harga
+                temp = l_pricemasuk[i];
+                l_pricemasuk[i] = l_pricemasuk[j];
+                l_pricemasuk[j] = temp;
+
+                //nama
+                tempname = l_nammasuk[i];
+                l_nammasuk[i] = l_nammasuk[j];
+                l_nammasuk[j] = tempname;
+            }
+        }
+    }
+
+    //output data
+    for(int i = 0;i <= datmasuk;i++){
+        cout << "No  " << i + 1 <<" : " <<endl;
+        cout << "Nama    : " << l_nammasuk[i] << endl;
+        cout << "Nominal : Rp " << l_pricemasuk[i] << endl << endl;         
+    }
 }
