@@ -1,13 +1,44 @@
 #include <iostream>
 
 using namespace std;
+
 //variabel global
 
+    string namapenumpang[100] = {
+        "Pablo",
+        "Ananda",
+        "Intan",
+        "Pratiwi",
+        "Loli",
+    };
+
+    string tujuan[100] = {
+        "Alauddin",
+        "Mall Ratu Indah",
+        "Toko Agung",
+        "MTC",
+        "Pasar Sentral",
+    };
+
+    float jarak[100] = {
+        14,
+        9.1,
+        1.6,                                                                                                                               ,
+        11,
+        5.5,
+        11,
+    };
+
+
+    int pembayaran[100];
+    int a = 5;
 
 
 //prosedur
-void namakelompok();
 
+    void angkutpenumpang();
+    void namakelompok();
+    
 
 
 int main(){
