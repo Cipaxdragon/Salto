@@ -149,7 +149,7 @@ void about(){
     cout << "|----------------------------------------|" << endl;
     cout << "| Ahmad Ghazali         | 60900121064    |" << endl;
     cout << "| Firman Reski Ramadhan | 60900121062    |" << endl;
-    cout << "| Muhammad Rafly        | 60900121062    |" << endl;
+    cout << "| Muhammad Rafly        | 60900121087    |" << endl;
     cout << "-----------------------------------------|" << endl;
 
 }
