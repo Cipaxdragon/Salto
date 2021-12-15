@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -39,8 +40,13 @@ void atm();
 void penarikantunai();
 void deposit();
 void transfer();
-void kirimuang(string);
 
+
+void kirimuang(string);
+void taruhan();
+int nilaiacak(int a);
+
+//function
 
 //pembantu
 bool satu = true;
@@ -91,8 +97,9 @@ int main(){
     cout << "| 4 | Cari   Transaksi  |" << endl;
     cout << "| 5 | Urutan Transaksi  |" << endl;
     cout << "| 6 | Akses Atm         |" << endl;
-    cout << "| 7 | Info              |" << endl;
-    cout << "| 8 | Keluar            |" << endl;
+    cout << "| 7 | Game Taruhan      |" << endl;
+    cout << "| 8 | Info              |" << endl;
+    cout << "| 9 | Keluar            |" << endl;
     cout << "=========================" << endl;
     
     lagi:
@@ -127,9 +134,13 @@ int main(){
             break;
         case 7:
             system("cls");
+            taruhan();
+            break;
+        case 8:
+            system("cls");
             about();
             break;
-        case 8 :
+        case 9 :
             return 0;
         default:
             cout << "== Inputan Cuma 1-8 == " << endl;
@@ -668,7 +679,72 @@ void kirimuang(string nama){
     }
 
 }
+void taruhan(){
+    int dadu;
+    int pasang;
+    int gangen; //ganjil genap
+    cout << "=== Game Judi Ganjil/Genap ===" << endl;
+    cout << "Ingin Berbaruh Berapa ?" << endl;
+    cout << "====> Rp ";
+    cin >> pasang;
+    cout << endl;
+    cout << "== Pilih ==" << endl;
+    cout << "1.Ganjil" << endl;
+    cout << "2.Genap " << endl;
+    cout << "====> ";
+    cin >> gangen;
+
+    switch (gangen){
+    case 1:
+        for(int i = 1; i < 50;i++){
+            system("cls");
+            cout << "===== Jedag Jedug =====" << endl;
+            dadu = nilaiacak(pasang);
+            cout << "====> "<< dadu << endl;
+        }
+
+        dadu = dadu % 2;
+        if(dadu == 1){
+            cout << "=== Kamu Menang === " << endl;
+            cout << "Selamat Kamu Menang Taruhan Rp " << pasang << endl;
+            uang = uang + pasang;
+        }
+        else{
+            cout << "=== Kamu Kalah === " << endl;
+            cout << "Kau Kalah Taruhan Rp " << pasang << endl;
+            uang = uang - pasang;
+        }
+        break;
+    case 2 :
+        for(int i = 1; i < 50;i++){
+            system("cls");
+            cout << "===== Jedag Jedug =====" << endl;
+            dadu = nilaiacak(pasang);
+            cout << "====> "<< dadu << endl;
+        }
+
+        dadu = dadu % 2;
+        if(dadu == 0){
+            cout << "=== Kamu Menang === " << endl;
+            cout << "Selamat Kamu Menang Taruhan Rp " << pasang << endl;
+            uang = uang + pasang;
+        }
+        else{
+            cout << "=== Kamu Kalah === " << endl;
+            cout << "Kau Kalah Taruhan Rp " << pasang << endl;
+            uang = uang - pasang;
+        }
+        break;
+    default:
+        break;
+    }
 
 
+}
 
 
+int nilaiacak(int a){
+    int nilai;
+    nilai = (rand() + a) % 10 + 1;
+    return  nilai;
+}
