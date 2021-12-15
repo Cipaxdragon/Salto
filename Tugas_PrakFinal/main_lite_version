@@ -7,22 +7,17 @@ using namespace std;
 //variabel Global
 
     int uang;
-    int bank;
-
 
     //pemasukan
     string nammasuk[100];
     int  pricemasuk[100];
     int datmasuk = -1;
 
-
     //pengeluaran
     string namkeluar[100];
     int pricekeluar[100];
     int datkeluar = -1;
     
-
-
 //Prototype
 void about();
 void tambah();
@@ -36,13 +31,13 @@ void cari();
 void urutan();
 void urutanpemasukan();
 void urutanpengeluaran();
+int totaltransaksi(int a);
 
 int main(){
 
     int pilih;
-    cout << "=== Program Dompet Digital ===" << endl << endl;
+    cout << "=== Program Budgeting Uang ===" << endl << endl;
     cout << "Uang Di dompet : Rp "<< uang << endl;
-    cout << "Uang Di Bank   : Rp "<< bank << endl << endl;
     
     //tampilan menu
     cout << "|=======================|" << endl;
@@ -60,38 +55,32 @@ int main(){
     cout << endl << "Pilih[1-8] ==> ";
     cin >> pilih;
 
+    system("cls");           
     //pemilihan
     switch(pilih){
         case 1:
-            system("cls");
             tambah();
             break;
         case 2:
-            system("cls");           
             daftar();
             break;
-        case 3:
-            system("cls");           
+        case 3:         
             hapus();           
             break;
         case 4:
-            system("cls");
             cari();
             break;
         case 5:
-            system("cls");
             urutan();
             break;
         case 6:
-            system("cls");
             about();
             break;
         case 7:
-            system("cls");
             return 0;
             break;
         default:
-            cout << "== Inputan Cuma 1-8 == " << endl;
+            cout << "== Inputan Cuma 1 - 7 == " << endl;
             system("pause");
             system("cls");
             main();
@@ -204,13 +193,19 @@ void pengeluaran(){
 
 }
 
+int totaltransaksi(int a){
+    int total;
+    for(int i = 0;i < a;i++){
+        total = pricemasuk[i] + pricemasuk[i + 1];
+    }
+    return total;
+}
 
 
 
 void daftar(){
     cout << "=== Program Dompet Digital ===" << endl << endl;
     cout << "Uang Di dompet : Rp "<< uang << endl;
-    cout << "Uang Di Bank   : Rp "<< bank << endl << endl;
     int total;
     int totalkeluar;
     cout << "==== Daftar Transaksi ==== " << endl;
@@ -221,9 +216,9 @@ void daftar(){
         cout << "Nama    : " << nammasuk[i] << endl;
         cout << "Nominal : Rp " << pricemasuk[i] << endl << endl;
     }
-    for(int i = 0;i < datmasuk;i++){
-        total = pricemasuk[i] + pricemasuk[i + 1];
-    }
+
+    total = totaltransaksi(datmasuk);
+
     if(!(datmasuk <= 0)){
         cout << endl << "Total Pemasukan : Rp " << total << endl; 
     }
@@ -237,9 +232,9 @@ void daftar(){
         cout << "Nama    : " << namkeluar[i] << endl;
         cout << "Nominal : Rp " << pricekeluar[i] << endl << endl;
     }
-    for(int i = 0;i < datkeluar;i++){
-        totalkeluar = pricekeluar[i] + pricekeluar[i + 1];
-    }
+
+    total = totaltransaksi(datmasuk);
+
     if(!(datkeluar <= 0)){
         cout << endl << "Total Pengeluaran : Rp " << totalkeluar << endl; 
     }
