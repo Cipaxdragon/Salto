@@ -476,3 +476,40 @@ void urutanpemasukan(){
         cout << "Nominal : Rp " << l_pricemasuk[i] << endl << endl;         
     }
 }
+
+void urutanpengeluaran(){
+    int temp;
+    string tempname;
+    string l_namkeluar[100];
+    int l_pricekeluar[100];
+    cout << "=== Top Pengeluaran ===" << endl;
+    //pemberian Value dari global ke Lokal
+    for(int i = 0;i <= datkeluar;i++){
+        l_namkeluar[i] = namkeluar[i]; 
+        l_pricekeluar[i] = pricekeluar[i]; 
+    }
+
+    //proses Sorting (selection sort) 
+    for(int  i = 0;i <= datkeluar;i++){
+        for(int j = i;j <= datkeluar;j++){
+            if(l_pricekeluar[j] > l_pricekeluar[i]){
+                //harga
+                temp = l_pricekeluar[i];
+                l_pricekeluar[i] = l_pricekeluar[j];
+                l_pricekeluar[j] = temp;
+
+                //nama
+                tempname = l_namkeluar[i];
+                l_namkeluar[i] = l_namkeluar[j];
+                l_namkeluar[j] = tempname;
+            }
+        }
+    }
+
+    //output data
+    for(int i = 0;i <= datkeluar;i++){
+        cout << "No  " << i + 1 <<" : " <<endl;
+        cout << "Nama    : " << l_namkeluar[i] << endl;
+        cout << "Nominal : Rp " << l_pricekeluar[i] << endl << endl;         
+    }
+}
