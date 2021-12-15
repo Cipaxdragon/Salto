@@ -8,6 +8,7 @@ using namespace std;
     int uang;
     int bank;
 
+
     //pemasukan
     string nammasuk[100];
     int  pricemasuk[100];
@@ -35,6 +36,10 @@ void urutan();
 void urutanpemasukan();
 void urutanpengeluaran();
 void atm();
+void penarikantunai();
+void deposit();
+void transfer();
+void kirimuang(string);
 
 
 //pembantu
@@ -51,7 +56,8 @@ void bantu(){
     pricemasuk[2] = 200000;
 
     datmasuk = 2;
-    uang = pricemasuk[0] + pricemasuk[1] + pricemasuk[2]; 
+    // uang = pricemasuk[0] + pricemasuk[1] + pricemasuk[2]; 
+    uang = 1000;
     // pengeluaran
     namkeluar[0] = "Beli Kopikap";
     namkeluar[1] = "Di Copet";
@@ -140,16 +146,16 @@ int main(){
 
 void about(){
     cout << "=== Tugas Final Algoritma Pemrograma===" << endl; 
-    cout << "\n\n";
+    cout << "\n";
     cout << "==== Kelompok Biru Tosca =====" << endl;
     cout << "Kelas : C " << endl <<endl; 
-    cout << "Daftar Nama Kelompok :" << endl;
-    cout << "----------------------------------------- " << endl;
+    cout << "Daftar Nama Kelompok :" << endl << endl;
+    cout << "------------------------------------------" << endl;
     cout << "| Nama                  | NIM            |" << endl;
     cout << "|----------------------------------------|" << endl;
     cout << "| Ahmad Ghazali         | 60900121064    |" << endl;
     cout << "| Firman Reski Ramadhan | 60900121062    |" << endl;
-    cout << "| Muhammad Rafly        | 60900121087    |" << endl;
+    cout << "| Muhammad Rafly        | 60900121062    |" << endl;
     cout << "-----------------------------------------|" << endl;
 
 }
@@ -516,6 +522,8 @@ void urutanpengeluaran(){
 
 
 void atm(){
+
+    int pilih;
     cout << "============== BRU ==============" << endl;
     cout << "----- Bank Rakyat Duwa Satu -----" << endl << endl;
 
@@ -524,4 +532,143 @@ void atm(){
     cout << "1. Penarikan Tunai" << endl;
     cout << "2. Deposit" << endl;
     cout << "3. Transfer" << endl << endl;
+
+
+    cout << "Input[1-3] => ";
+    cin >> pilih;
+
+    switch (pilih){
+    case 1:
+        penarikantunai();
+        break;
+    case 2 :
+        deposit();
+        break;
+    case 3:
+        transfer();
+        break;
+    default:
+        break;
+    }
+
+
 }
+
+void penarikantunai(){
+    int tarik;
+    cout << "=== Penarikan Tunai ===" << endl;
+    cout << "~Jumlah Uang Yang Ingin Di Tarik ~" << endl;
+    cout << endl << "[Input]==> Rp ";
+    cin >> tarik;
+
+    
+    if(tarik >= bank){
+        cout << "Saldo Tidak Mencukupi" << endl;
+    }
+    else {
+        bank = bank - tarik;
+        uang = uang + tarik;
+        cout << "Penarikan Tunai Sebesar Rp " << tarik << " Berhasil" << endl;
+    }
+
+}
+
+void deposit(){
+    int tabung;
+    cout << "=== Deposit ===" << endl;
+
+    cout << endl <<"--- Ingin Deposit Berapa ? ----" << endl;
+    cout << "Uang Di Dompet : Rp " << uang << endl;
+    cout << "===> Rp ";
+    cin >> tabung;
+
+    if(uang >= tabung){
+        uang = uang - tabung;
+        bank = bank + tabung;
+        cout << "Deposito Sebesar Rp " << tabung << " berhasil" << endl;
+    }
+    else{
+        cout << "Uang di dompetmu tidak cukup" << endl;
+    }
+}
+
+//data bank
+string namapemilikrekening[4]= {
+    "Pablo",
+    "Jenggo",
+    "Ghazali",
+    "Mamat",
+};
+
+string norek[4] = {
+    "0856065",
+    "2265769",
+    "2345769",
+    "8385769",
+};
+
+void transfer(){
+
+    string nomor;
+    bool temu = false;
+    cout << "==== Transfer Uang ====" << endl;
+    cout << endl;
+
+    cout << "Masukan Nomor Rekening" << endl << endl;
+    cout << "===>  ";
+    cin >> nomor;
+
+    for(int i = 0;i < 5;i++){
+        if(nomor == norek[i]){
+            cout << "Konfirmasi Ingin Transfer Ke :" << endl << endl;
+            cout << "Nama   : " << namapemilikrekening[i] << endl;
+            cout << "No Rek : " << norek[i] << endl;
+            temu = true;
+            string nama = namapemilikrekening[i];
+            char yn;
+            cout << "=== [Y/N] ==> ";
+            cin >> yn;
+            yn = toupper(yn);
+
+            if(yn == 'Y'){
+                kirimuang(nama);
+            }
+            else{
+                system("cls");
+                main();
+            }
+        }
+
+    }
+    if(temu == false){
+        cout << "Nomor Rekening Tidak ditemukan" << endl;
+
+    }
+
+
+    
+}
+
+
+void kirimuang(string nama){
+    int transfa;
+    cout << "=== Ingin Transfer  Berapa ===" << endl;
+    cout << "Saldo Bank : Rp " << bank << endl << endl;
+    cout << "Input Nominal ===> ";
+    cin >> transfa;
+
+    cout << endl;
+    if(bank >= transfa){
+
+        cout << "Transfer Ke " << nama << " Sebesar Rp " << transfa << " berhasil" << endl;
+        bank = bank - transfa;
+    }
+    else{
+        cout << "Saldo Di bank Tidak Cukup Kerja Dulu  Sana" << endl;
+    }
+
+}
+
+
+
+
