@@ -1,0 +1,72 @@
+#1 
+	Buatlah Program untuk mencetak bilangan ganjil kelipatan 31 yang lebih besar dari 20 dan lebih kecil dari 4903 dengan menggunakan logika perulangan FOR
+
+#2
+	Buatlah Program menghitung besarnya diskon harga yang didapatkan pembeli jila setiap barang yabg dibeli mendapat diskon 5%
+
+	catatan 
+	1. Konstanta
+	2. Menampilkan Besarnya Potongan harga dari harga total barang belanja 
+	3 Nama Barang , Jumlah Item, Dan Harga Per Item Di input Penggua
+
+#3
+	Buatlah Program untuk mencetak bilangan genap yang lebih besar dari 73 dan lebih kecil dari 908 menggunakan logika perulangan while 
+#4
+	buatlah program untuk menghitung harga sebidang tanah yang berbentuk persegi panjang dengan ukuran sisinya adalah X meter dan Y meter. Harga Satuan tanah mengacu pada harga jual tanah tetangga yang berukuran panjang 2 meter dan lebar 1 meter yang laku dengan harga 400 ribu rupiah 
+
+	- Ukuran X dan Y tanah yang diinput pengguna
+	- output program menampilkan tanah dengan ukuran X dan Y
+	- selesaikan program anda dengan menggunakan deklarasi variabel dan konstanta 
+
+#5 (Mungkin)
+	Program Kelipatan 3 dan 7 Lebih besar dari 113 dan lebih kecil dari 1119 Menggunakan Do While 
+#6 (Nda Jelas)
+	Buatlah Program Untuk Menghitung Komisi Penjual 
+	- 1 Ekor Ayam Potong 
+	- 1 Ekor Ayam kampung
+	- 1 Ekor Ayam Kampung Anton 
+	Pendapat 5000 dan 7000
+#7
+	
+	Buatlah sebuah program untuk memeriksa apakah bilangan X adalah ganjil, genap, bilangan positif, atau bilangan negatif. Bilangan X diinput pengguna. Contoh A = -3, maka A adalah 
+
+#8
+	Buatlah Program Untuk Menghitung perbedaan ongkos perbedaan Menggunakan Sepeda motor dengan mobil. Biaya berkendara dengan sepeda motor adalah Rp 8000 per 10 KM Sedangkan biaya jarak temptuh yang akan dihitung adalah Y kilo meter. Hitung Perbedaan Biaya berkendara dengan Sepeda Motor Dibandingkan dengan Mobil.
+#9
+	Buatlah Program Untuk Memeriksa Body Massa Index (BMI). BMI adalah berat badan dibagi dengan tinggi badan pangkat 2. Jika BMI kurang dari 18 maka status kurus. Jika BMI 18 - 24 makan kondisi Normal . Jika BMI 25-29 Maka Kelebihan Berat badan dan tinggi badan diinput 
+
+#10
+	Buatlah Program untuk menghitung lama dan ongkos pekerjaan suatu proyek.Jika Jumlah pekerja 50 orang maka ongkos proyek adlaah 100 juta dan akan selesai 2 minggu . Jika pekerja 100 orang makan ongkos 2x lipat tapi selesai 1 minggu . Hitung ongkos dn lama pengerjaan  jika jumlah pekerja adalah X
+
+
+#11 
+	Buatlah Program Untuk Mencetaek 5 bilangan Ganjil Yang merupakan kelipatan 17 yang lebih besar dari 217 menggunakan operator tennary dan perulangan while (40 point)
+
+
+#12
+	Buatlah program untuk menghitung prediksi harga jagung di masa depan jika setiap tahun terjadi kenaikan inflasi 2%. Hitung harga jagung X tahun kedepan jika harga saat ini harga jagung adalah Y Rupiah. 
+	Catatan
+
+	p) Variabel X tahun ke depan dan harga Y diinput pengguna (20 poin)
+
+	q) Output program menampilkan harga jagung setelah X tahun kedepan (20 poin)
+
+	r) Selesaikan program anda dengan menggunakan deklarasi variabel dan konstanta untuk nilau yang sesuai 20(point)
+
+
+#13
+	Buatlah Program Untuk Membantu Pasien Memilih Dokter 
+	- Jika Keluhan Flu Maka Sarankah  Dokter Umum 
+	- Flu dan Sakit Tenggorokan Sarankan Dokter THT 
+	- Flu dan Sakit Tenggorokan, Batuk Batuk Sarankan Ke Dokter Spesialis Paru Paru 
+
+#14
+	Menkonversi Rupiah Ke Dollar dan Yen
+	1 dollar = 14000
+	1 yen = 120 rupiah
+	Variabel X adalah Inputan
+	
+	Catatan
+	- Variabel X Jumlah Uang Yang Di inputkan 
+	- Output Program Menampilkan hasil Konversi Dollar dan yen 
+	- Selesaikan Menggunakan Variabel dan Konstanta untuk nilai yang sesuai
